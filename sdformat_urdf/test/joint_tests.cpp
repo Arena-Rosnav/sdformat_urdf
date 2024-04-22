@@ -257,8 +257,8 @@ TEST(Joint, joint_revolute_default_limits)
   EXPECT_EQ("joint_revolute", joint->name);
   EXPECT_EQ(urdf::Joint::REVOLUTE, joint->type);
   ASSERT_NE(nullptr, joint->limits);
-  EXPECT_DOUBLE_EQ(-1e16, joint->limits->lower);  // SDFormat default
-  EXPECT_DOUBLE_EQ(1e16, joint->limits->upper);  // SDFormat default
+  EXPECT_DOUBLE_EQ(-std::numeric_limits<double>::infinity(), joint->limits->lower);
+  EXPECT_DOUBLE_EQ(std::numeric_limits<double>::infinity(), joint->limits->upper);
   EXPECT_DOUBLE_EQ(std::numeric_limits<double>::infinity(), joint->limits->effort);
   EXPECT_DOUBLE_EQ(std::numeric_limits<double>::infinity(), joint->limits->velocity);
 }
