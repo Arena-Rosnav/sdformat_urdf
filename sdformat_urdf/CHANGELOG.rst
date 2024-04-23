@@ -2,6 +2,21 @@
 Changelog for package sdformat_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.0 (2024-04-23)
+------------------
+* Use gz vendor packages and update to Harmonic (`#28 <https://github.com/ros/sdformat_urdf/issues/28>`_)
+* Support Gazebo Harmonic (`#23 <https://github.com/ros/sdformat_urdf/issues/23>`_)
+* ign to gz migration (`#19 <https://github.com/ros/sdformat_urdf/issues/19>`_)
+  * ign->gz
+  * revertingsdf13 changes
+  ---------
+* Create sdformat_urdf_plugin as SHARED instead of MODULE for macOS compatibility (`#22 <https://github.com/ros/sdformat_urdf/issues/22>`_)
+  * Create sdformat_urdf_plugin as SHARED instead of MODULE for macOS compatibility
+  * Remove trailing whitespace
+* Support Gazebo Garden (`#17 <https://github.com/ros/sdformat_urdf/issues/17>`_)
+* updating gtest conditionals (`#16 <https://github.com/ros/sdformat_urdf/issues/16>`_)
+* Contributors: Addisu Z. Taddese, Dharini Dutia, Louise Poubel, Rhys Mainwaring, Silvio Traversaro
+
 1.0.1 (2022-06-21)
 ------------------
 * Remove version requirement on sdformat_test_files (`#15 <https://github.com/ros/sdformat_urdf/issues/15>`_)
