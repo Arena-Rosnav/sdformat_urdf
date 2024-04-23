@@ -2,6 +2,9 @@
 Changelog for package sdformat_urdf
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.1 (2024-04-23)
+------------------
+
 2.0.0 (2024-04-23)
 ------------------
 * Use gz vendor packages and update to Harmonic (`#28 <https://github.com/ros/sdformat_urdf/issues/28>`_)
