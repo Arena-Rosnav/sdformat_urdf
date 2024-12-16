@@ -86,6 +86,15 @@ target_link_libraries(sdformat_urdf_plugin PRIVATE
   urdf_parser_plugin::urdf_parser_plugin
 )
 
+# add sdf2urdf executable
+add_executable(sdf2urdf
+  src/sdf2urdf.cpp
+)
+target_link_libraries(sdf2urdf PUBLIC
+  sdformat${SDF_VER}::sdformat${SDF_VER}
+  urdfdom_headers::urdfdom_headers
+)
+
 ament_export_dependencies(pluginlib)
 ament_export_dependencies(rcutils)
 ament_export_dependencies(sdformat${SDF_VER})
@@ -101,6 +110,9 @@ install(TARGETS sdformat_urdf EXPORT sdformat_urdf-export
 install(TARGETS sdformat_urdf_plugin
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+install(TARGETS sdf2urdf
   RUNTIME DESTINATION bin
 )
 
